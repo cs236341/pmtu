@@ -1,0 +1,15 @@
+! -*- ripd -*-
+
+!
+hostname R3-ripd
+password en
+enable password en
+!
+router rip
+ network 200.100.103.0/24
+ network R3-eth1
+ network 200.100.104.0/24
+ passive-interface R3-eth2
+!
+line vty
+!

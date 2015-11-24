@@ -1,0 +1,17 @@
+! -*- ripd -*-
+
+!
+hostname R2-ripd
+password en
+enable password en
+!
+interface R2-eth1
+ no ip rip split-horizon
+!
+router rip
+ network 200.100.102.0/24
+ network R2-eth1
+ network R2-eth2
+!
+line vty
+!
